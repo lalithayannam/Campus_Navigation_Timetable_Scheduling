@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {"name": "Main Gate", "x": 0, "y": 0},
+    {"name": "Admin Block", "x": 2, "y": 1},
+    {"name": "Engineering Block", "x": 5, "y": 1},
+    {"name": "Library", "x": 5, "y": 4},
+    {"name": "CSE Lab", "x": 8, "y": 4},
+    {"name": "Auditorium", "x": 2, "y": 5},
+    {"name": "Cafeteria", "x": 8, "y": 1},
+    {"name": "Hostel", "x": 10, "y": 5}
+  ],
+  "edges": [
+    ["Main Gate", "Admin Block", 2],
+    ["Main Gate", "Auditorium", 5],
+    ["Admin Block", "Engineering Block", 3],
+    ["Admin Block", "Auditorium", 4],
+    ["Engineering Block", "Library", 3],
+    ["Engineering Block", "Cafeteria", 3],
+    ["Library", "CSE Lab", 3],
+    ["CSE Lab", "Hostel", 4],
+    ["Cafeteria", "CSE Lab", 3],
+    ["Cafeteria", "Hostel", 5],
+    ["Auditorium", "Library", 5]
+  ]
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intelligent Campus System</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>🎓 Intelligent Campus Navigation & Scheduling</h1>
+  <p>Computational Thinking Project — Python</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Campus Navigation</h2>
+    <div class="grid">
+      <label>Source
+        <select id="source"></select>
+      </label>
+      <label>Destination
+        <select id="destination"></select>
+      </label>
+      <label>Algorithm
+        <select id="algorithm">
+          <option value="dijkstra">Dijkstra</option>
+          <option value="astar">A*</option>
+          <option value="bfs">BFS</option>
+          <option value="dfs">DFS</option>
+        </select>
+      </label>
+    </div>
+    <button onclick="findRoute()">Find Route</button>
+    <div id="routeResult" class="result"></div>
+  </section>
+
+  <section class="card">
+    <h2>Smart Timetable Scheduler</h2>
+    <p>Compare greedy, backtracking and branch-and-bound scheduling.</p>
+    <select id="scheduleAlgorithm">
+      <option value="branch_and_bound">Branch & Bound</option>
+      <option value="backtracking">Backtracking</option>
+      <option value="greedy">Greedy</option>
+    </select>
+    <button onclick="generateSchedule()">Generate Timetable</button>
+    <div id="scheduleResult" class="result"></div>
+  </section>
+
+  <section class="card">
+    <h2>Campus Locations</h2>
+    <input id="search" placeholder="Search building prefix, e.g. lib" oninput="searchBuildings()">
+    <ul id="searchResults"></ul>
+  </section>
+</main>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
